@@ -1,3 +1,3 @@
 # dotnet
 
-Repo with C# proj made at courses
+Repo with C# projects made at courses
