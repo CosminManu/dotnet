@@ -19,6 +19,5 @@ namespace Basic_Calculator
             this.LeftSide = "";
             this.RightSide = "";
         }
-
     }
 }
