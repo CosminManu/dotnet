@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Basic_Calculator
 {
-    public enum OperationType   // fol ca un tip de data
+    public enum OperationType   // fol ca tip de data
     {
         /// <summary>
         /// Adds two numbers
