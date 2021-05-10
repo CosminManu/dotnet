@@ -1,0 +1,14 @@
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\Fast Food demo\Fast Food demo\bin\Debug\Fast Food demo.exe.config
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\Fast Food demo\Fast Food demo\bin\Debug\Fast Food demo.exe
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\Fast Food demo\Fast Food demo\bin\Debug\Fast Food demo.pdb
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\Fast Food demo\Fast Food demo\obj\Debug\Fast Food demo.csprojAssemblyReference.cache
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\Fast Food demo\Fast Food demo\obj\Debug\Fast_Food_demo.Form1.resources
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\Fast Food demo\Fast Food demo\obj\Debug\Fast_Food_demo.Properties.Resources.resources
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\Fast Food demo\Fast Food demo\obj\Debug\Fast_Food_demo.UserControl1.resources
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\Fast Food demo\Fast Food demo\obj\Debug\Fast Food demo.csproj.GenerateResource.cache
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\Fast Food demo\Fast Food demo\obj\Debug\Fast Food demo.csproj.CoreCompileInputs.cache
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\Fast Food demo\Fast Food demo\obj\Debug\Fast Food demo.exe
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\Fast Food demo\Fast Food demo\obj\Debug\Fast Food demo.pdb
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\Fast Food demo\Fast Food demo\obj\Debug\Fast_Food_demo.UserControl2.resources
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\Fast Food demo\Fast Food demo\obj\Debug\Fast_Food_demo.LogInForm.resources
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\Fast Food demo\Fast Food demo\obj\Debug\Fast_Food_demo.RegisterForm.resources
