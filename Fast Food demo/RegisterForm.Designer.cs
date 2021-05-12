@@ -1,4 +1,4 @@
-﻿namespace Fast_Food_demo
+namespace Fast_Food_demo
 {
     partial class RegisterForm
     {
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.panel2 = new System.Windows.Forms.Panel();
             this.PrenumeTb = new System.Windows.Forms.MaskedTextBox();
@@ -41,10 +42,12 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.registerBtn = new System.Windows.Forms.Button();
             this.CloseBtn = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -68,6 +71,8 @@
             this.PrenumeTb.TabIndex = 14;
             this.PrenumeTb.Text = "Prenume";
             this.PrenumeTb.Click += new System.EventHandler(this.PrenumeTb_Click);
+            this.PrenumeTb.Validating += new System.ComponentModel.CancelEventHandler(this.PrenumeTb_Validating);
+            this.PrenumeTb.Validated += new System.EventHandler(this.PrenumeTb_Click);
             // 
             // panel1
             // 
@@ -90,6 +95,8 @@
             this.NameTb.TabIndex = 11;
             this.NameTb.Text = "Nume";
             this.NameTb.Click += new System.EventHandler(this.NameTb_Click);
+            this.NameTb.Validating += new System.ComponentModel.CancelEventHandler(this.NameTb_Validating);
+            this.NameTb.Validated += new System.EventHandler(this.NameTb_Click);
             // 
             // pictureBox2
             // 
@@ -134,6 +141,8 @@
             this.EmailTb.TabIndex = 18;
             this.EmailTb.Text = "Email";
             this.EmailTb.Click += new System.EventHandler(this.EmailTb_Click);
+            this.EmailTb.Validating += new System.ComponentModel.CancelEventHandler(this.EmailTb_Validating);
+            this.EmailTb.Validated += new System.EventHandler(this.EmailTb_Click);
             // 
             // pictureBox4
             // 
@@ -188,6 +197,10 @@
             this.CloseBtn.UseVisualStyleBackColor = false;
             this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -217,6 +230,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,5 +249,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button registerBtn;
         private System.Windows.Forms.Button CloseBtn;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
