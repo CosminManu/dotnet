@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,10 +10,17 @@ using System.Windows.Forms;
 
 namespace Fast_Food_demo
 {
+
+    /// <summary>
+    /// https://www.youtube.com/watch?v=hxOB5ALWQMQ&list=WL&index=48
+    /// conexiune la bdd SQLlite
+    /// </summary>
+
     public partial class RegisterForm : Form
     {
 
         bool drag = false;
+        bool valid = true;
         Point startPoint = new Point(0, 0);
 
         public RegisterForm()
@@ -35,26 +42,34 @@ namespace Fast_Food_demo
 
         private void NameTb_Click(object sender, EventArgs e)
         {
-            NameTb.Clear();
+            
             panel1.BackColor = Color.FromArgb(235, 48, 14);
             panel2.BackColor = Color.White;
             panel3.BackColor = Color.White;
+            errorProvider1.SetError(NameTb, "");
+            NameTb.Clear();
         }
 
         private void PrenumeTb_Click(object sender, EventArgs e)
         {
-            PrenumeTb.Clear();
+           
             panel2.BackColor = Color.FromArgb(235, 48, 14);
             panel1.BackColor = Color.White;
             panel3.BackColor = Color.White;
+            errorProvider1.SetError(PrenumeTb, "");
+            PrenumeTb.Clear();
         }
 
         private void EmailTb_Click(object sender, EventArgs e)
         {
-            EmailTb.Clear();
+            
             panel3.BackColor = Color.FromArgb(235, 48, 14);
             panel1.BackColor = Color.White;
             panel2.BackColor = Color.White;
+
+            //daca totul e ok, setez errProv pe ""
+            errorProvider1.SetError(EmailTb, "");
+            EmailTb.Clear();
         }
 
         private void CloseBtn_Click(object sender, EventArgs e)
@@ -90,5 +105,72 @@ namespace Fast_Food_demo
         {
 
         }
+
+        private void EmailTb_Validating(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                ValidatingCode();
+            }
+            catch(Exception ex)
+            {
+                //utiliz nu poate face submit si se selecteaza email de corectat
+                e.Cancel = true;
+                EmailTb.Select(0, EmailTb.Text.Length);
+                errorProvider1.SetError(EmailTb, ex.Message);
+            }
+        }
+
+
+        private void NameTb_Validating(object sender, CancelEventArgs e)
+        {
+            /*if(valid == false)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(EmailTb, "Last name and First name are required fields.");
+            }*/
+        }
+
+        private void PrenumeTb_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+
+
+        //merg pe caz naspa, cand arunc avertismente (throw excep)
+        private void ValidatingCode()
+        {
+            //daca nu s a introd nimic
+            if(EmailTb.Text.Length == 0)
+            {
+                string message = "Email address is a required field.";
+                string title = "Error";
+                MessageBox.Show(message, title);
+                throw new Exception(message);
+
+            }
+            //daca nu gaseste punct sau nu gaseste @ at arunca avertis (excep)
+            //daca gaseste amandoua f||f = f sare peste excep
+            else if(EmailTb.Text.IndexOf(".") == -1 || EmailTb.Text.IndexOf("@") == -1)
+            {
+                string message = "Email address must be valid address format." + "\nFor example: 'someone@example.com'";
+                string title = "Error";
+                MessageBox.Show(message, title);
+                throw new Exception(message);
+            }
+
+            /*if(NameTb.Text.Length == 0 || PrenumeTb.Text.Length == 0)
+            {
+                string message = "Last name and First name are required fields.";
+                string title = "Error";
+                MessageBox.Show(message, title);
+                valid = false;
+                throw new Exception(message);
+            }*/
+        }
+
+       
+
+     
     }
 }
