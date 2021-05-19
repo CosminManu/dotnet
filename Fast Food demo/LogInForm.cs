@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,23 +34,36 @@ namespace Fast_Food_demo
         {
             // ...validari...
 
-            this.Hide();
-            Form1 formularp = new Form1();
-            formularp.Show();
-            formularp.Closed += (s, args) => this.Close();      //exp lambda: creeaz func pe loc cand
-                                                                //form p e inchis
-            //this.Close();                                     //s, args parametri (obj sender, EventArgs)
+            if (validPass() == true)
+            {
+                this.Hide();
+                Form1 formularp = new Form1();
+                formularp.Show();
+                formularp.Closed += (s, args) => this.Close();      //exp lambda: creeaz func pe loc cand
+                                                                    //form p e inchis
+                //this.Close();                                     //s, args parametri (obj sender, EventArgs)
+            }
+            else
+            {
+                MessageBox.Show("Sign in failed.");
+            }
+            
         }
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
             RegisterForm rfrm = new RegisterForm();
             rfrm.ShowDialog();
+
         }
 
         private void usernameTb_Click(object sender, EventArgs e)
         {
-            usernameTb.Clear();
+            if(usernameTb.Text == "Username")
+            {
+                usernameTb.Clear();
+            }
+            
             panel1.BackColor = Color.FromArgb(235, 48, 14);
             panel2.BackColor = Color.White;
             panel3.BackColor = Color.White;
@@ -58,23 +71,47 @@ namespace Fast_Food_demo
 
         private void passwordTb_Click(object sender, EventArgs e)
         {
-            passwordTb.Clear();
+            if(passwordTb.Text == "Password")
+            {
+                passwordTb.Clear();
+            }
+            
             passwordTb.PasswordChar = '*';
             panel2.BackColor = Color.FromArgb(235, 48, 14);
             panel1.BackColor = Color.White;
             panel3.BackColor = Color.White;
-        
+
+            validPass();
         }
 
         private void ConfirmPassTb_Click(object sender, EventArgs e)
         {
-            ConfirmPassTb.Clear();
+            if (ConfirmPassTb.Text == "Confirm Password")
+            {
+                ConfirmPassTb.Clear();
+            }
+            
             ConfirmPassTb.PasswordChar = '*';
             panel3.BackColor = Color.FromArgb(235, 48, 14);
             panel1.BackColor = Color.White;
             panel2.BackColor = Color.White;
 
+            validPass();
+          
         }
+
+        private bool validPass()
+        {
+            if (passwordTb.Text.Length != 0 && ConfirmPassTb.Text != passwordTb.Text)
+            {
+                string message = "Confirm password is not the same.";
+                string title = "Error";
+                MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else return true;
+        }
+
 
         private void CloseBtn_Click(object sender, EventArgs e)
         {
@@ -102,8 +139,8 @@ namespace Fast_Food_demo
         {
             drag = false;
         }
+
         #endregion
 
-       
     }
 }
