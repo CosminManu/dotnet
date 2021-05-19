@@ -20,7 +20,6 @@ namespace Fast_Food_demo
     {
 
         bool drag = false;
-        bool valid = true;
         Point startPoint = new Point(0, 0);
 
         public RegisterForm()
@@ -40,36 +39,42 @@ namespace Fast_Food_demo
         {
         }
 
-        private void NameTb_Click(object sender, EventArgs e)
+        private void NumeTb_Click(object sender, EventArgs e)
         {
-            
+            if (NumeTb.Text == "Nume")
+            {
+                NumeTb.Clear();
+            }
             panel1.BackColor = Color.FromArgb(235, 48, 14);
             panel2.BackColor = Color.White;
             panel3.BackColor = Color.White;
-            errorProvider1.SetError(NameTb, "");
-            NameTb.Clear();
+            errorProvider1.SetError(NumeTb, "");
         }
 
         private void PrenumeTb_Click(object sender, EventArgs e)
         {
-           
+            if (PrenumeTb.Text == "Prenume")
+            {
+                PrenumeTb.Clear();
+            }
             panel2.BackColor = Color.FromArgb(235, 48, 14);
             panel1.BackColor = Color.White;
             panel3.BackColor = Color.White;
             errorProvider1.SetError(PrenumeTb, "");
-            PrenumeTb.Clear();
         }
 
         private void EmailTb_Click(object sender, EventArgs e)
         {
-            
+            if (EmailTb.Text == "Email")
+            {
+                EmailTb.Clear();
+            }
             panel3.BackColor = Color.FromArgb(235, 48, 14);
             panel1.BackColor = Color.White;
             panel2.BackColor = Color.White;
 
             //daca totul e ok, setez errProv pe ""
             errorProvider1.SetError(EmailTb, "");
-            EmailTb.Clear();
         }
 
         private void CloseBtn_Click(object sender, EventArgs e)
@@ -122,18 +127,34 @@ namespace Fast_Food_demo
         }
 
 
-        private void NameTb_Validating(object sender, CancelEventArgs e)
+        private void NumeTb_Validating(object sender, CancelEventArgs e)
         {
-            /*if(valid == false)
+            try
             {
+                ValidatingNames();
+            }
+            catch (Exception ex)
+            {
+                //utiliz nu poate face submit si se selecteaza email de corectat
                 e.Cancel = true;
-                errorProvider1.SetError(EmailTb, "Last name and First name are required fields.");
-            }*/
+                NumeTb.Select(0, NumeTb.Text.Length);
+                errorProvider1.SetError(NumeTb, ex.Message);
+            }
         }
 
         private void PrenumeTb_Validating(object sender, CancelEventArgs e)
         {
-
+            try
+            {
+                ValidatingNames();
+            }
+            catch (Exception ex)
+            {
+                //utiliz nu poate face submit si se selecteaza email de corectat
+                e.Cancel = true;
+                PrenumeTb.Select(0, PrenumeTb.Text.Length);
+                errorProvider1.SetError(PrenumeTb, ex.Message);
+            }
         }
 
 
@@ -141,7 +162,7 @@ namespace Fast_Food_demo
         private void ValidatingCode()
         {
             //daca nu s a introd nimic
-            if(EmailTb.Text.Length == 0)
+            if(EmailTb.Text.Length == 0 && ( NumeTb.Text.Length != 0 && PrenumeTb.Text.Length != 0) )
             {
                 string message = "Email address is a required field.";
                 string title = "Error";
@@ -149,24 +170,33 @@ namespace Fast_Food_demo
                 throw new Exception(message);
 
             }
-            //daca nu gaseste punct sau nu gaseste @ at arunca avertis (excep)
+            //daca nu gaseste punct sau nu gaseste @ atunci arunca avertis (excep)
             //daca gaseste amandoua f||f = f sare peste excep
-            else if(EmailTb.Text.IndexOf(".") == -1 || EmailTb.Text.IndexOf("@") == -1)
+            else if(EmailTb.Text.Length != 0 && (EmailTb.Text.IndexOf(".") == -1 || EmailTb.Text.IndexOf("@") == -1) )
             {
                 string message = "Email address must be valid address format." + "\nFor example: 'someone@example.com'";
                 string title = "Error";
                 MessageBox.Show(message, title);
                 throw new Exception(message);
             }
+        }
 
-            /*if(NameTb.Text.Length == 0 || PrenumeTb.Text.Length == 0)
+        private void ValidatingNames()
+        {
+            if (NumeTb.Text.Length == 0 || PrenumeTb.Text.Length == 0 )
             {
                 string message = "Last name and First name are required fields.";
                 string title = "Error";
                 MessageBox.Show(message, title);
-                valid = false;
                 throw new Exception(message);
-            }*/
+            }
+            else if(NumeTb.Text.Contains("0123456789") || PrenumeTb.Text.Contains("0123456789"))
+            {
+                string message = "Last name and First name are only character fields.";
+                string title = "Error";
+                MessageBox.Show(message, title);
+                throw new Exception(message);
+            }
         }
 
        
