@@ -174,7 +174,7 @@ namespace Fast_Food_demo
             //daca gaseste amandoua f||f = f sare peste excep
             else if(EmailTb.Text.Length != 0 && (EmailTb.Text.IndexOf(".") == -1 || EmailTb.Text.IndexOf("@") == -1) )
             {
-                string message = "Email address must be valid address format." + "\nFor example: 'someone@example.com'";
+                string message = "Email address must be valid address format.";
                 string title = "Error";
                 MessageBox.Show(message, title);
                 throw new Exception(message);
