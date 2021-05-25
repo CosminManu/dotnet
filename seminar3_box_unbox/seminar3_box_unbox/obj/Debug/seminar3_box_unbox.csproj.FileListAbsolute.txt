@@ -1,0 +1,7 @@
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\seminar3_box_unbox\seminar3_box_unbox\bin\Debug\seminar3_box_unbox.exe.config
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\seminar3_box_unbox\seminar3_box_unbox\bin\Debug\seminar3_box_unbox.exe
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\seminar3_box_unbox\seminar3_box_unbox\bin\Debug\seminar3_box_unbox.pdb
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\seminar3_box_unbox\seminar3_box_unbox\obj\Debug\seminar3_box_unbox.csprojAssemblyReference.cache
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\seminar3_box_unbox\seminar3_box_unbox\obj\Debug\seminar3_box_unbox.csproj.CoreCompileInputs.cache
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\seminar3_box_unbox\seminar3_box_unbox\obj\Debug\seminar3_box_unbox.exe
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\seminar3_box_unbox\seminar3_box_unbox\obj\Debug\seminar3_box_unbox.pdb
