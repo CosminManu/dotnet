@@ -1,0 +1,11 @@
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\seminar4_refacut\WinForms_s4\bin\Debug\WinForms_s4.exe.config
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\seminar4_refacut\WinForms_s4\bin\Debug\WinForms_s4.exe
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\seminar4_refacut\WinForms_s4\bin\Debug\WinForms_s4.pdb
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\seminar4_refacut\WinForms_s4\obj\Debug\WinForms_s4.csprojAssemblyReference.cache
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\seminar4_refacut\WinForms_s4\obj\Debug\WinForms_s4.FormularPrincipal.resources
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\seminar4_refacut\WinForms_s4\obj\Debug\WinForms_s4.Properties.Resources.resources
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\seminar4_refacut\WinForms_s4\obj\Debug\WinForms_s4.csproj.GenerateResource.cache
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\seminar4_refacut\WinForms_s4\obj\Debug\WinForms_s4.csproj.CoreCompileInputs.cache
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\seminar4_refacut\WinForms_s4\obj\Debug\WinForms_s4.exe
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\seminar4_refacut\WinForms_s4\obj\Debug\WinForms_s4.pdb
+D:\ASE_CSIE\Cursuri\PAW_C#\WinForms\seminar4_refacut\WinForms_s4\obj\Debug\WinForms_s4.FormularEditare.resources
