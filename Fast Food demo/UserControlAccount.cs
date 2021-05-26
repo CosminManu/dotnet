@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,30 +30,50 @@ namespace Fast_Food_demo
         /// <param name="e"></param>
         private void btnAdauga_Click(object sender, EventArgs e)
         {
-            bool valid = true;                      // form valid initial (flag)
-            string Nume = tbNume.Text;      //ia inf de la textbox Denumire 
-            string Prenume = tbPrenume.Text;
+            bool valid = true;                      
+            string Nume = tbNume.Text;              //last Name (nume familie)
+            string Prenume = tbPrenume.Text;        //first Name
             string Email = tbEmail.Text;
             string UserName = tbUsername.Text;
             string Password = tbPassword.Text;
+            //pt Age este EVarsta cb
 
-           
-            if (string.IsNullOrEmpty(Nume) || string.IsNullOrWhiteSpace(Nume))
+            int number = 0;
+
+            if (string.IsNullOrEmpty(Prenume) || string.IsNullOrWhiteSpace(Prenume))
             {
                 valid = false;
                 MessageBox.Show("Please fill first name ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (string.IsNullOrEmpty(Prenume) || string.IsNullOrWhiteSpace(Prenume))
+            else if (valid)
+            {
+                for (int i = 0; i < Prenume.Length; i++)        //loopeaza in fiec carac al prenumelui
+                {
+                    if (char.IsNumber(Prenume[i]))
+                    {
+                        valid = false;
+                        MessageBox.Show("First name contains digits.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            if (string.IsNullOrEmpty(Nume) || string.IsNullOrWhiteSpace(Nume))
             {
                 valid = false;
                 MessageBox.Show("Please fill last name ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (string.IsNullOrEmpty(Email) || string.IsNullOrWhiteSpace(Email))
+            else if (valid)
             {
-                valid = false;
-                MessageBox.Show("Please fill email address ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                for(int i = 0; i < Nume.Length; i++)        //loopeaza in fiec carac al numelui
+                {
+                    if (char.IsNumber(Nume[i]))
+                    {
+                        valid = false;
+                        MessageBox.Show("Last name contains digits.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
             }
-            else if (string.IsNullOrEmpty(Email) || string.IsNullOrWhiteSpace(Email))
+
+            if (string.IsNullOrEmpty(Email) || string.IsNullOrWhiteSpace(Email))
             {
                 valid = false;
                 MessageBox.Show("Please fill email address ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -65,28 +85,35 @@ namespace Fast_Food_demo
                 string title = "Error";
                 MessageBox.Show(message, title);
             }
-            else if (string.IsNullOrEmpty(UserName) || string.IsNullOrWhiteSpace(UserName))
+
+            int IndexVarsta = comboBoxVarsta.SelectedIndex;
+            EVarsta inc;                             // val by default
+            if (IndexVarsta == 0)
+                inc = EVarsta.less_16_years;
+            else if (IndexVarsta == 1)
+                inc = EVarsta.between_16_21_years;
+            else if (IndexVarsta == 2)
+                inc = EVarsta.over_21_years;
+            else
+            {
+                valid = false;
+                MessageBox.Show("Please select your age ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                inc = EVarsta.over_21_years;
+            }
+
+            if (string.IsNullOrEmpty(UserName) || string.IsNullOrWhiteSpace(UserName))
             {
                 valid = false;
                 MessageBox.Show("Please fill your username ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (string.IsNullOrEmpty(Password) || string.IsNullOrWhiteSpace(Password))
+            if (string.IsNullOrEmpty(Password) || string.IsNullOrWhiteSpace(Password))
             {
                 valid = false;
                 MessageBox.Show("Please fill your password ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            int IndexIncadrare = comboBoxVarsta.SelectedIndex;
-            EVarsta inc;                             // val by default
-            if (IndexIncadrare == 0)
-                inc = EVarsta.less_16_years;
-            else if (IndexIncadrare == 1)
-                inc = EVarsta.between_16_21_years;
-            else
-                inc = EVarsta.over_21_years;
-
-
-            // VALIDARI
+            
+     
             if (valid)
             {
                 Customer c = new Customer(Nume, Prenume,
@@ -95,35 +122,34 @@ namespace Fast_Food_demo
                 //pt a popula apoi componenta c#
                 listaClienti.Add(c);
 
-                /*//curatare lista (componenta c# din dreapta form)
-                //evita chei duplicate (bag de mai multe ori acelasi prog)
-                lvProgramatori.Items.Clear();
+                //implementare ca in seminar cu lvi in dreapta
+                //sau salvare inf introduse in spate pe o baza de date
 
-                //pt fiecare prog din lista de programatori (var in clasa)
-                //adauga in lista de prog 'lvProg' (componenta de c#)
-                foreach (Programator prog in listaProg)
-                {
-                    ListViewItem lwi = new ListViewItem(new String[]
-                    {
-                        prog.Denumire,
-                        prog.Varsta.ToString(),
-                        prog.Salariu.ToString()
-                    });
 
-                    lvProgramatori.Items.Add(lwi);
-                }
 
-                populeazaListView();*/
+
+
+
                 MessageBox.Show("User information added ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
             }
-        
-            
+
         }
         
         //nu e gata
         private void btnEditeaza_Click(object sender, EventArgs e)
         {
             EditForm edit = new EditForm();
+            edit.ShowDialog();
+        }
+
+        private void btnSterge_Click(object sender, EventArgs e)
+        {
+            tbNume.Clear();
+            tbPrenume.Clear();
+            tbEmail.Clear();
+            tbUsername.Clear();
+            tbPassword.Clear();
+            comboBoxVarsta.SelectedIndex = -1;
         }
     }
 }
