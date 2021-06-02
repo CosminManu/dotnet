@@ -36,7 +36,7 @@ namespace Fast_Food_demo
             string Email = tbEmail.Text;
             string UserName = tbUsername.Text;
             string Password = tbPassword.Text;
-            //pt Age este EVarsta cb
+            
 
             int number = 0;
 
@@ -86,26 +86,21 @@ namespace Fast_Food_demo
                 MessageBox.Show(message, title);
             }
 
-            int IndexVarsta = comboBoxVarsta.SelectedIndex;
-            EVarsta inc;                             // val by default
-            if (IndexVarsta == 0)
-                inc = EVarsta.less_16_years;
-            else if (IndexVarsta == 1)
-                inc = EVarsta.between_16_21_years;
-            else if (IndexVarsta == 2)
-                inc = EVarsta.over_21_years;
-            else
+            DateTime birthDate = dtpBirth.Value;
+            if (DateTime.Compare(birthDate, DateTime.Now) > 0)
+            //daca birthDate > data actuala 
             {
                 valid = false;
-                MessageBox.Show("Please select your age ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                inc = EVarsta.over_21_years;
+                MessageBox.Show("Please select your corect birth date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
 
             if (string.IsNullOrEmpty(UserName) || string.IsNullOrWhiteSpace(UserName))
             {
                 valid = false;
                 MessageBox.Show("Please fill your username ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
             if (string.IsNullOrEmpty(Password) || string.IsNullOrWhiteSpace(Password))
             {
                 valid = false;
@@ -117,7 +112,7 @@ namespace Fast_Food_demo
             if (valid)
             {
                 Customer c = new Customer(Nume, Prenume,
-                    Email, inc, UserName, Password);
+                    Email, birthDate, UserName, Password);
                 //adaugare in  listaProg (var in clasa) clasa Collections
                 //pt a popula apoi componenta c#
                 listaClienti.Add(c);
@@ -149,7 +144,7 @@ namespace Fast_Food_demo
             tbEmail.Clear();
             tbUsername.Clear();
             tbPassword.Clear();
-            comboBoxVarsta.SelectedIndex = -1;
+            dtpBirth.Value = DateTime.Now;
         }
     }
 }
