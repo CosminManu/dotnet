@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,12 +22,14 @@ namespace Fast_Food_demo.Modele
         public string Username { get; set; }
         public string Password { get; set; }
 
-        public Customer(String nume, String prenume, int varsta, char gen)
+        public Customer(String nume, String prenume, String email, DateTime zi, String username, String parola)
         {
             this.Nume = nume;
             this.Prenume = prenume;
-            this.Varsta = varsta;
-            this.Gender = gen;
+            this.Email = email;
+            this.ZiNastere = zi;
+            this.Username = username;
+            this.Password = parola;
         }
     }
 }
