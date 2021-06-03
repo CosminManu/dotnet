@@ -11,18 +11,6 @@ using System.Data.SQLite;
 
 namespace Fast_Food_demo
 {
-    /// <summary>
-    /// Problema la TAB
-    /// nu se sterge 'password' se suprascrie inf
-    /// 
-    /// Daca e timp implementat afisare formRegister
-    /// in fata celui LogIn (min 23 https://www.youtube.com/watch?v=kcrOAF473LM&list=WL&index=53&t=6s)
-    /// video cu conex SQLite
-    /// https://www.youtube.com/watch?v=pde8dZEYIHA&t=460s
-    /// + inspirat cotfas
-    /// </summary>
-
-
     public partial class LogInForm : Form
     {
         bool drag = false;
