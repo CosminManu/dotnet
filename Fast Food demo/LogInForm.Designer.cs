@@ -1,4 +1,4 @@
-﻿namespace Fast_Food_demo
+namespace Fast_Food_demo
 {
     partial class LogInForm
     {
@@ -44,6 +44,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -53,7 +54,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(115, 35);
+            this.pictureBox1.Location = new System.Drawing.Point(115, 18);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(68, 51);
@@ -64,7 +65,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(35, 129);
+            this.pictureBox2.Location = new System.Drawing.Point(35, 97);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 28);
@@ -78,7 +79,7 @@
             this.usernameTb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.usernameTb.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameTb.ForeColor = System.Drawing.Color.White;
-            this.usernameTb.Location = new System.Drawing.Point(75, 137);
+            this.usernameTb.Location = new System.Drawing.Point(75, 105);
             this.usernameTb.Name = "usernameTb";
             this.usernameTb.Size = new System.Drawing.Size(200, 15);
             this.usernameTb.TabIndex = 2;
@@ -88,7 +89,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(35, 160);
+            this.panel1.Location = new System.Drawing.Point(35, 128);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(240, 1);
             this.panel1.TabIndex = 3;
@@ -96,7 +97,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(35, 207);
+            this.panel2.Location = new System.Drawing.Point(35, 175);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(240, 1);
             this.panel2.TabIndex = 6;
@@ -107,7 +108,7 @@
             this.passwordTb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordTb.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordTb.ForeColor = System.Drawing.Color.White;
-            this.passwordTb.Location = new System.Drawing.Point(75, 184);
+            this.passwordTb.Location = new System.Drawing.Point(75, 152);
             this.passwordTb.Name = "passwordTb";
             this.passwordTb.Size = new System.Drawing.Size(200, 15);
             this.passwordTb.TabIndex = 5;
@@ -117,7 +118,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(35, 176);
+            this.pictureBox3.Location = new System.Drawing.Point(35, 144);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(28, 28);
@@ -133,7 +134,7 @@
             this.SignInBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignInBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignInBtn.ForeColor = System.Drawing.Color.Black;
-            this.SignInBtn.Location = new System.Drawing.Point(35, 288);
+            this.SignInBtn.Location = new System.Drawing.Point(35, 244);
             this.SignInBtn.Margin = new System.Windows.Forms.Padding(0);
             this.SignInBtn.Name = "SignInBtn";
             this.SignInBtn.Size = new System.Drawing.Size(240, 32);
@@ -162,7 +163,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(35, 253);
+            this.panel3.Location = new System.Drawing.Point(35, 221);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(240, 1);
             this.panel3.TabIndex = 11;
@@ -173,7 +174,7 @@
             this.ConfirmPassTb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ConfirmPassTb.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmPassTb.ForeColor = System.Drawing.Color.White;
-            this.ConfirmPassTb.Location = new System.Drawing.Point(75, 230);
+            this.ConfirmPassTb.Location = new System.Drawing.Point(75, 198);
             this.ConfirmPassTb.Name = "ConfirmPassTb";
             this.ConfirmPassTb.Size = new System.Drawing.Size(200, 15);
             this.ConfirmPassTb.TabIndex = 10;
@@ -197,7 +198,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(35, 222);
+            this.pictureBox4.Location = new System.Drawing.Point(35, 190);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(28, 28);
@@ -210,7 +211,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(276, 182);
+            this.label1.Location = new System.Drawing.Point(276, 150);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(17, 24);
             this.label1.TabIndex = 20;
@@ -221,11 +222,22 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(276, 133);
+            this.label2.Location = new System.Drawing.Point(276, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(17, 24);
             this.label2.TabIndex = 20;
             this.label2.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Coral;
+            this.label3.Location = new System.Drawing.Point(59, 293);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(193, 33);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Don\'t have an account? \r\nThen, please register.\r\n";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LogInForm
             // 
@@ -233,6 +245,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(318, 385);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox4);
@@ -281,5 +294,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
