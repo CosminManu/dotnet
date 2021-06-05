@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -35,6 +36,7 @@ namespace Fast_Food_demo
 
         private void HomeBtn_Click(object sender, EventArgs e)
         {
+            hideSubMenu();
             SidePanel.Height = HomeBtn.Height;      //inaltimea sideP aceeasi ca buton home
             SidePanel.Top = HomeBtn.Top;
 
@@ -42,37 +44,74 @@ namespace Fast_Food_demo
             PanelUserControl.Controls.Clear();      //curata panelul
             PanelUserControl.Controls.Add(uc);      //adauga Controlul1
 
-            hideSubMenu();
+
         }
 
         private void EatInBtn_Click(object sender, EventArgs e)
         {
+            hideSubMenu();
             SidePanel.Height = EatInBtn.Height;      //inaltimea sideP aceeasi ca buton 
             SidePanel.Top = EatInBtn.Top;
-            
-            /*UserControl2 uc2 = new UserControl2();  //aduce in fata UserControl2 la click pe btn
-            PanelUserControl.Controls.Clear();      //curata panelul
-            PanelUserControl.Controls.Add(uc2);     //adauga Controlul2*/
 
-            showSubMenu(panelSubMenuEatIn);         //afis submeniul de la Eat In
+            UserControl2 uc2 = new UserControl2();  //aduce in fata UserControl2 la click pe btn
+            PanelUserControl.Controls.Clear();      //curata panelul
+            PanelUserControl.Controls.Add(uc2);     //adauga Controlul2
+
+            
         }
 
         private void OrderBtn_Click(object sender, EventArgs e)
         {
+            hideSubMenu();
             SidePanel.Height = OrderBtn.Height;      //inaltimea sideP aceeasi ca buton 
             SidePanel.Top = OrderBtn.Top;
 
+            
+        }
+
+        private void DeliveryBtn_Click(object sender, EventArgs e)
+        {
             hideSubMenu();
+            SidePanel.Height = DeliveryBtn.Height;      //inaltimea sideP aceeasi ca buton 
+            SidePanel.Top = DeliveryBtn.Top;
+
+
         }
 
         private void PaymentBtn_Click(object sender, EventArgs e)
         {
+            hideSubMenu();
             SidePanel.Height = PaymentBtn.Height;      //inaltimea sideP aceeasi ca buton
             SidePanel.Top = PaymentBtn.Top;
             showSubMenu(panelSubMenuPayment);         //afis submeniul de la Payment
         }
 
-        
+        private void AccountBtn_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            SidePanel.Height = AccountBtn.Height;      //inaltimea sideP aceeasi ca buton
+            SidePanel.Top = AccountBtn.Top;
+
+            UserControlAccount ucAC = new UserControlAccount();  //aduce in fata UserControl2 la click pe btn
+            PanelUserControl.Controls.Clear();      //curata panelul
+            PanelUserControl.Controls.Add(ucAC);     //adauga Controlul2
+
+        }
+
+        private void CashPayBtn_Click(object sender, EventArgs e)
+        {
+
+
+            hideSubMenu();
+        }
+
+        private void CardPayBtn_Click(object sender, EventArgs e)
+        {
+
+
+
+            hideSubMenu();
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -82,13 +121,11 @@ namespace Fast_Food_demo
         }
 
         #region HideShow Submenus
-
         /// <summary>
         /// at beginning all submenus are hidden
         /// </summary>
         private void customizeDesign()
         {
-            panelSubMenuEatIn.Visible = false;
             panelSubMenuPayment.Visible = false;
             //la fel si pt celelalte submeniuri
         }
@@ -98,8 +135,6 @@ namespace Fast_Food_demo
         /// </summary>
         private void hideSubMenu()
         {
-            if (panelSubMenuEatIn.Visible == true)
-                panelSubMenuEatIn.Visible = false;
             if (panelSubMenuPayment.Visible == true)
                 panelSubMenuPayment.Visible = false;
         }
@@ -119,46 +154,6 @@ namespace Fast_Food_demo
             }
             else
                 subMenu.Visible = false;       //subMenus remains closed
-        }
-
-        private void LocationsBtn_Click(object sender, EventArgs e)
-        {
-            //...
-            //...code...
-            //...
-            hideSubMenu();      //when btn selected, submenu must hide
-        }
-
-        private void TablesBtn_Click(object sender, EventArgs e)
-        {
-            //...
-            //...code...
-            //...
-            hideSubMenu();      //when btn selected, submenu must hide
-        }
-
-        private void OccupancyBtn_Click(object sender, EventArgs e)
-        {
-            //...
-            //...code...
-            //...
-            hideSubMenu();      //when btn selected, submenu must hide
-        }
-
-        private void CashPayBtn_Click(object sender, EventArgs e)
-        {
-            //...
-            //...code...
-            //...
-            hideSubMenu();      //when btn selected, submenu must hide
-        }
-
-        private void CardPayBtn_Click(object sender, EventArgs e)
-        {
-            //...
-            //...code...
-            //...
-            hideSubMenu();      //when btn selected, submenu must hide
         }
         #endregion
 
@@ -287,14 +282,23 @@ namespace Fast_Food_demo
         {
             drag = false;
         }
-
-
-
-
-
-
         #endregion
 
-       
+        #region Social btns
+        private void TripAdvisorBtn_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.tripadvisor.com");
+        }
+
+        private void FbBtn_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.facebook.com");
+        }
+
+        private void InstaBtn_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.instagram.com");
+        }
+        #endregion
     }
 }
