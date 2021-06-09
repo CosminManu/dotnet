@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<ArrayOfItems xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Items>
+    <Cantitate>1</Cantitate>
+    <Pret>3.5</Pret>
+    <Total>0</Total>
+    <Denumire>French Fries</Denumire>
+    <efood>french_fries</efood>
+  </Items>
+  <Items>
+    <Cantitate>2</Cantitate>
+    <Pret>3.5</Pret>
+    <Total>0</Total>
+    <Denumire>French Fries</Denumire>
+    <efood>french_fries</efood>
+  </Items>
+  <Items>
+    <Cantitate>5</Cantitate>
+    <Pret>6.5</Pret>
+    <Total>0</Total>
+    <Denumire>Hot Wings</Denumire>
+    <efood>hot_wings</efood>
+  </Items>
+</ArrayOfItems>

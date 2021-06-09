@@ -1,0 +1,6 @@
+Denumire Cantitate Pret
+French Fries 1 3.5
+French Fries 2 3.5
+Hamburger 3 5.5
+Hamburger 4 5.5
+Soda 5 2
