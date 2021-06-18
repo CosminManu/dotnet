@@ -1,0 +1,7 @@
+D:\ASE_CSIE\Cursuri\PAW_C#\examen\sub_rez\Delegate\Main\bin\Debug\Main.exe.config
+D:\ASE_CSIE\Cursuri\PAW_C#\examen\sub_rez\Delegate\Main\bin\Debug\Main.exe
+D:\ASE_CSIE\Cursuri\PAW_C#\examen\sub_rez\Delegate\Main\bin\Debug\Main.pdb
+D:\ASE_CSIE\Cursuri\PAW_C#\examen\sub_rez\Delegate\Main\obj\Debug\Main.csprojAssemblyReference.cache
+D:\ASE_CSIE\Cursuri\PAW_C#\examen\sub_rez\Delegate\Main\obj\Debug\Main.csproj.CoreCompileInputs.cache
+D:\ASE_CSIE\Cursuri\PAW_C#\examen\sub_rez\Delegate\Main\obj\Debug\Main.exe
+D:\ASE_CSIE\Cursuri\PAW_C#\examen\sub_rez\Delegate\Main\obj\Debug\Main.pdb
